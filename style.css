@@ -599,3 +599,32 @@ p.lead {
         height: 72px
     }
 }
+
+/* Mobile layout: move Flight Experience + Resume directly under Summary */
+@media (max-width: 880px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Stack main cards individually */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Move aside right after the first card in main (Summary) */
+    .grid > main > .card:first-child {
+        order: 1;
+    }
+
+    aside {
+        order: 2;
+        margin-top: 18px;
+    }
+
+    /* Keep the rest of the main cards after aside */
+    .grid > main > .card:not(:first-child) {
+        order: 3;
+    }
+}
