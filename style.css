@@ -327,10 +327,10 @@ p.lead {
     overflow: hidden;
 }
 
-:root {
-    --polaroid-lift: 12px;
-    --polaroid-shadow: 24px;
-    --polaroid-darkness: 0.35;
+:root { /* 12, 24, 0.35 */
+    --polaroid-lift: 5px;
+    --polaroid-shadow: 15px; 
+    --polaroid-darkness: 0.25;
 }
 
 .aircraft-card {
@@ -484,6 +484,7 @@ p.lead {
     font-size: 13px
 }
 
+/* RESUME PREVIEW */
 .resume-preview {
     /* Resume PDF preview image in sidebar */
     margin-top: 12px;
@@ -497,6 +498,42 @@ p.lead {
     border: 2px solid var(--accent);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2),
         0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.resume-container {
+    position: relative;
+    display: block;       
+    width: fit-content;   
+    margin: 0 auto;       
+}
+
+.resume-container .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 600;
+    background: rgba(0,0,0,0.6);
+    padding: 6px 12px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.resume-container:hover .hover-text {
+    opacity: 1;
+}
+/* RESUME PREVIEW END */
+
+/* Hover effect */
+.resume-preview:hover {
+  filter: brightness(80%); /* darken a bit */
+  transform: scale(1.05);  /* optional slight zoom */
+  cursor: pointer;
 }
 
 /* MAP */
