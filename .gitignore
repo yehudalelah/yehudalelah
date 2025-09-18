@@ -1,0 +1,11 @@
+# Backup folders
+backup copy - 9:17:2025/
+backup/
+
+# Optional template files
+flown aircraft code .html
+ORIGINAL FLIGHT EXPERIENCE CODE (KEEEP).html
+
+# Large or unnecessary files
+*.psd
+*.mov
