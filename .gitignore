@@ -5,6 +5,7 @@ backup/
 # Optional template files
 flown aircraft code .html
 ORIGINAL FLIGHT EXPERIENCE CODE (KEEEP).html
+script.js/js
 
 # Large or unnecessary files
 *.psd
