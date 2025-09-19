@@ -327,9 +327,10 @@ p.lead {
     overflow: hidden;
 }
 
-:root { /* 12, 24, 0.35 */
+:root {
+    /* 12, 24, 0.35 */
     --polaroid-lift: 5px;
-    --polaroid-shadow: 15px; 
+    --polaroid-shadow: 15px;
     --polaroid-darkness: 0.25;
 }
 
@@ -502,9 +503,9 @@ p.lead {
 
 .resume-container {
     position: relative;
-    display: block;       
-    width: fit-content;   
-    margin: 0 auto;       
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .resume-container .hover-text {
@@ -514,7 +515,7 @@ p.lead {
     transform: translate(-50%, -50%);
     color: white;
     font-weight: 600;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     padding: 6px 12px;
     border-radius: 6px;
     opacity: 0;
@@ -527,13 +528,16 @@ p.lead {
 .resume-container:hover .hover-text {
     opacity: 1;
 }
+
 /* RESUME PREVIEW END */
 
 /* Hover effect */
 .resume-preview:hover {
-  filter: brightness(80%); /* darken a bit */
-  transform: scale(1.05);  /* optional slight zoom */
-  cursor: pointer;
+    filter: brightness(80%);
+    /* darken a bit */
+    transform: scale(1.05);
+    /* optional slight zoom */
+    cursor: pointer;
 }
 
 /* MAP */
@@ -651,7 +655,7 @@ p.lead {
     }
 
     /* Move aside right after the first card in main (Summary) */
-    .grid > main > .card:first-child {
+    .grid>main>.card:first-child {
         order: 1;
     }
 
@@ -661,7 +665,7 @@ p.lead {
     }
 
     /* Keep the rest of the main cards after aside */
-    .grid > main > .card:not(:first-child) {
+    .grid>main>.card:not(:first-child) {
         order: 3;
     }
 }
