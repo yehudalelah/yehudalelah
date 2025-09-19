@@ -202,6 +202,7 @@ function renderModal(flights) {
     note.textContent = 'These highlights were auto-selected from the uploaded logbook.';
     modalContent.appendChild(note);
 }
+
 function moveAsideUnderSummary() {
     if (window.innerWidth <= 880) {
         const grid = document.querySelector('.grid');
