@@ -1,3 +1,4 @@
+/* highlight.js */
 /* === Highlight flights dataset (used for “Selected Flight Highlights” + modal) === */
 const highlights = {
     "Total Time": [{
@@ -68,7 +69,12 @@ const highlights = {
         "TotalTime": 4.6
     }]
 };
+/* highlight.js */
 
+
+
+
+/* preview.js */
 /* === Target UL where highlights are inserted (index.html → <ul id="highlights">) === */
 const list = document.getElementById('highlights');
 
@@ -92,7 +98,12 @@ preview.forEach(h => {
   `;
     list.appendChild(li);
 });
+/* preview.js */
 
+
+
+
+/* modal.js */
 /* === Modal references (index.html → <div id="modal">) === */
 const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modalContent');
@@ -123,45 +134,6 @@ modal.addEventListener('click', (e) => {
         modal.setAttribute('aria-hidden', 'true');
     }
 });
-
-/* === Reference toggles (Craig Simon, Gene Bishop, etc.) === */
-document.querySelectorAll('.ref-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-        const content = button.nextElementSibling; // the .ref-content div
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    });
-});
-
-/* === Flown Aircraft Carousel === */
-const aircraftCards = document.querySelectorAll('.aircraft-card');
-let currentIndex = 0;
-
-function updateCarousel() {
-    aircraftCards.forEach((card, i) => {
-        card.classList.remove('active', 'prev', 'next');
-        if (i === currentIndex) {
-            card.classList.add('active');
-        } else if (i === (currentIndex - 1 + aircraftCards.length) % aircraftCards.length) {
-            card.classList.add('prev');
-        } else if (i === (currentIndex + 1) % aircraftCards.length) {
-            card.classList.add('next');
-        }
-    });
-}
-
-document.querySelector('.carousel-btn.left').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + aircraftCards.length) % aircraftCards.length;
-    updateCarousel();
-});
-
-document.querySelector('.carousel-btn.right').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % aircraftCards.length;
-    updateCarousel();
-});
-
-updateCarousel(); // init
-
-
 
 /* === Function to render modal flight highlights === */
 function renderModal(flights) {
@@ -202,7 +174,59 @@ function renderModal(flights) {
     note.textContent = 'These highlights were auto-selected from the uploaded logbook.';
     modalContent.appendChild(note);
 }
+/* modal.js */
 
+
+
+
+/* corousel.js */
+/* === Flown Aircraft Carousel === */
+const aircraftCards = document.querySelectorAll('.aircraft-card');
+let currentIndex = 0;
+
+function updateCarousel() {
+    aircraftCards.forEach((card, i) => {
+        card.classList.remove('active', 'prev', 'next');
+        if (i === currentIndex) {
+            card.classList.add('active');
+        } else if (i === (currentIndex - 1 + aircraftCards.length) % aircraftCards.length) {
+            card.classList.add('prev');
+        } else if (i === (currentIndex + 1) % aircraftCards.length) {
+            card.classList.add('next');
+        }
+    });
+}
+
+document.querySelector('.carousel-btn.left').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + aircraftCards.length) % aircraftCards.length;
+    updateCarousel();
+});
+
+document.querySelector('.carousel-btn.right').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % aircraftCards.length;
+    updateCarousel();
+});
+
+updateCarousel(); // init
+/* corousel.js */
+
+
+
+
+/* references.js */
+/* === Reference toggles (Craig Simon, Gene Bishop, etc.) === */
+document.querySelectorAll('.ref-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling; // the .ref-content div
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+});
+/* references.js */
+
+
+
+
+/* responsive.js */
 function moveAsideUnderSummary() {
     if (window.innerWidth <= 880) {
         const grid = document.querySelector('.grid');
@@ -223,3 +247,4 @@ function moveAsideUnderSummary() {
 
 window.addEventListener('resize', moveAsideUnderSummary);
 window.addEventListener('load', moveAsideUnderSummary);
+/* responsive.js */

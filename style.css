@@ -85,6 +85,10 @@ p.lead {
     color: var(--muted)
 }
 
+.linkedin {
+    color: var(--accent);
+}
+
 .grid {
     /* Layout: main resume content + right sidebar */
     display: grid;
@@ -129,14 +133,12 @@ p.lead {
     color: var(--accent)
 }
 
+.chip_t {
+    border: 2px solid #0f4c81;
+}
+
 .chip_gold {
-    /* Individual certification bubbles */
-    background: #EFBF04;
-    padding: 6px 10px;
-    border-radius: 999px;
-    font-size: 13px;
-    /*color: var(--accent)*/
-    color: white
+    border: 1px solid #EFBF04;
 }
 
 .chip_complex {
@@ -668,4 +670,63 @@ p.lead {
     .grid>main>.card:not(:first-child) {
         order: 3;
     }
+}
+
+
+/* print media */
+/* === Print Styling === */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ccc;
+    background: white;
+    page-break-inside: avoid; /* keep cards from splitting */
+  }
+
+  header, .card, .section-title {
+    color: black !important;
+  }
+
+  /* Hide interactive or unnecessary elements */
+  #map,
+  .aircraft-carousel,
+  .modal,
+  .carousel-btn,
+  .contact-form,
+  .footer {
+    display: none !important;
+  }
+
+  /* Simplify grid → single column for print */
+  .grid {
+    display: block !important;
+  }
+
+  aside {
+    margin-top: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
 }
