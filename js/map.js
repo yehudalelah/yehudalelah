@@ -4,7 +4,7 @@ const map = L.map('map');
 // Base map layer
 L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data © OpenStreetMap contributors, SRTM | Map style: OpenTopoMap',
-    maxZoom: 10
+    maxZoom: 17
 }).addTo(map);
 
 // === Add US state borders ===
