@@ -8,24 +8,23 @@ L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // === Add US state borders ===
-// Using public GeoJSON so no local file needed
-fetch('https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json')
-    .then(res => res.json())
-    .then(data => {
-        // Canvas renderer for smooth redraw
-        const stateRenderer = L.canvas({
-            padding: 0.5
-        });
+// fetch('https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json')
+//     .then(res => res.json())
+//     .then(data => {
+//         // Canvas renderer for smooth redraw
+//         const stateRenderer = L.canvas({
+//             padding: 0.5
+//         });
 
-        L.geoJSON(data, {
-            style: {
-                color: '#FF6600', // bright orange for best contrast
-                weight: 2,
-                fill: false
-            },
-            renderer: stateRenderer
-        }).addTo(map);
-    });
+//         L.geoJSON(data, {
+//             style: {
+//                 color: '#FF6600', // bright orange for best contrast
+//                 weight: 2,
+//                 fill: false
+//             },
+//             renderer: stateRenderer
+//         }).addTo(map);
+//     });
 
 // Marker icons
 // https://github.com/pointhi/leaflet-color-markers?tab=readme-ov-file
