@@ -117,7 +117,7 @@ const flights = [{
             [51.1217, -114.0081],
             [37.2935, -81.2077]
         ],
-        label: "KBLF → KSMF → CYYC → KBLF"
+        label: "KBLF → KSMF → CYYC → KBLF" // navajo
     }
     
 ];
