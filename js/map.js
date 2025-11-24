@@ -108,7 +108,18 @@ const flights = [{
             [30.20503, -91.98775]
         ],
         label: "KCXY → 6L4 → 2A0 → KUBS → 17M → KLFT"
+    },
+
+    {
+        coords: [
+            [37.2935, -81.2077],
+            [38.6944, -121.5888],
+            [51.1217, -114.0081],
+            [37.2935, -81.2077]
+        ],
+        label: "KBLF → KSMF → CYYC → KBLF"
     }
+    
 ];
 
 // Store all points to calculate bounds
