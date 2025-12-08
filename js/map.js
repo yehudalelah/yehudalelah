@@ -117,7 +117,20 @@ const flights = [{
             [51.1217, -114.0081],
             [37.2935, -81.2077]
         ],
-        label: "KBLF → KSMF → CYYC → KBLF" // navajo
+        label: "KBLF → KSMF → CYYC → KBLF (PA-31-350)" // navajo
+    },
+
+    {
+        coords: [
+            [30.6267, -88.0680],  // KBFM
+            [30.0424, -90.0282], // KNEW
+            [30.2050, -91.9878], // KLFT
+            [30.1261, -93.2234], // KLCH
+            [30.8703, -87.8193], // 1R8
+            [30.6267, -88.0680]  // KBFM
+               
+        ],
+        label: "KBFM → KNEW → KLFT → KLCH → 1R8 → KBFM" // navajo
     }
     
 ];
