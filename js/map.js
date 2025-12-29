@@ -130,7 +130,18 @@ const flights = [{
             [30.6267, -88.0680]  // KBFM
                
         ],
-        label: "KBFM → KNEW → KLFT → KLCH → 1R8 → KBFM" // navajo
+        label: "KBFM → KNEW → KLFT → KLCH → 1R8 → KBFM"
+    },
+
+    {
+        coords: [
+            [30.5019, -88.2751], // 2R5
+            [33.6386, -91.7510], // KLLQ
+            [35.2882, -95.0994], // KGZL,
+            [36.7319, -97.0997], // KPNC
+            [37.6698, -97.0780] // 3AU
+        ],
+        label: "2R5 → KLLQ → KGZL → KPNC → 3AU"
     }
     
 ];
