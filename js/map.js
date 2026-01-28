@@ -11,15 +11,16 @@ L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 // https://github.com/pointhi/leaflet-color-markers?tab=readme-ov-file
 // https://github.com/jawj/MapMarkerAwesome?tab=readme-ov-file
 
-const flatBlueIcon = "https://camo.githubusercontent.com" +
-    "/fae150ed3ee0cb2b477f7990ec97b64b068def3c36199f479e1c37e5aabb6da3" +
-    "/68747470733a2f2f6a61776a2e6769746875622e696f2f4d61704d61726b65" +
-    "72417765736f6d652f6578616d706c65732f706c61696e2e737667";
+// const flatBlueIcon = "https://camo.githubusercontent.com" +
+//     "/fae150ed3ee0cb2b477f7990ec97b64b068def3c36199f479e1c37e5aabb6da3" +
+//     "/68747470733a2f2f6a61776a2e6769746875622e696f2f4d61704d61726b65" +
+//     "72417765736f6d652f6578616d706c65732f706c61696e2e737667";
 
+const flatBlueIcon = "https://www.clipartmax.com/png/full/264-2643020_simple-location-map-pin-icon2-red-free-vector-data-icon-pin-map.png"
 const markerIcon = new L.Icon({
     iconUrl: flatBlueIcon,
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-    iconSize: [25, 41],
+    iconSize: [30, 35], // 25, 41
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
     shadowSize: [41, 41]
@@ -146,6 +147,20 @@ const flights = [{
             [30.5019, -88.2751] // 2R5
         ],
         label: "2R5 → KLLQ → KGZL → KPNC → 3AU → KGZL → KTVR → 2R5"
+    },
+
+    {
+        coords: [
+            [30.5019, -88.2751], // 2R5
+            [32.1108, -84.1889], // KACJ
+            [34.7726, -80.3889], // KPYG
+            [38.5255, -77.8596], // KCJR
+            [41.0670, -73.7076], // KHPN
+
+
+            [30.5019, -88.2751] // 2R5
+        ],
+        label: "2R5 → "
     }
     
 ];
