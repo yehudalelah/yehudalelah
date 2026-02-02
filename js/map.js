@@ -160,7 +160,7 @@ const flights = [{
 
             [30.5019, -88.2751] // 2R5
         ],
-        label: "2R5 → "
+        label: "2R5 → KACJ → KPYG → KCJR → KHPN → 2R5"
     }
     
 ];
