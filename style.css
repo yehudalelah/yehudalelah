@@ -124,15 +124,6 @@ p.lead {
     gap: 8px
 }
 
-.chip {
-    /* Individual certification bubbles */
-    background: #eef3fb;
-    padding: 6px 10px;
-    border-radius: 999px;
-    font-size: 13px;
-    color: var(--accent)
-}
-
 .chip_t {
     border: 1px solid #0f4c81;
 }
@@ -141,24 +132,13 @@ p.lead {
     border: 1px solid #EFBF04;
 }
 
-.chip_complex {
+.chip {
     /* Individual certification bubbles */
-    background: #FF7518;
+    background: #eef3fb;
     padding: 6px 10px;
     border-radius: 999px;
     font-size: 13px;
-    /*color: var(--accent)*/
-    color: white
-}
-
-.chip_hp {
-    /* Individual certification bubbles */
-    background: #CD1C18;
-    padding: 6px 10px;
-    border-radius: 999px;
-    font-size: 13px;
-    /*color: var(--accent)*/
-    color: white
+    color: var(--accent)
 }
 
 .skills {
