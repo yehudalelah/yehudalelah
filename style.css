@@ -132,6 +132,10 @@ p.lead {
     border: 1px solid #EFBF04;
 }
 
+.chip_red {
+    border: 1px solid #D70040;
+}
+
 .chip {
     /* Individual certification bubbles */
     background: #eef3fb;
@@ -203,9 +207,20 @@ p.lead {
 }
 
 .timeline-item {
-    margin: 12px 0
+    margin: 12px 0;
+    position: relative;
 }
 
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -12px;            /* distance from vertical line */
+    top: 10px;              /* vertical alignment with job title */
+    width: 12px;            /* length of horizontal line */
+    height: 2px;
+    background: #e6eef9; /* background: var(--accent); */
+}
 
 .stats {
     /* Container for flight hour stat boxes in sidebar */
@@ -535,6 +550,43 @@ p.lead {
 .leaflet-control-attribution {
     font-size: 8px;
     opacity: 0.5;
+}
+
+#map-legend {
+    display: flex;           /* horizontal row */
+    gap: 5px;               /* space between the two legend items */
+    margin-top: 12px;
+    font-size: 15px;
+    align-items: center;     /* vertical alignment */
+    flex-wrap: wrap;         /* in case it overflows */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-icon {
+    width: 20px;  /* 14 */
+    height: 20px; /* 14 */
+}
+
+.legend-line {
+    width: 40px;
+    height: 2px;
+    border-radius: 2px;
+}
+
+/* Blue solid line for piston */
+.legend-line.solid.blue {
+    background-color: #0096FF;
+}
+
+/* Green dashed line for jet */
+.legend-line.dashed.green {
+    border-bottom: 2px dashed #00C2A8;
+    height: 0;
 }
 
 /* MAP END */
