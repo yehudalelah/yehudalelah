@@ -52,8 +52,8 @@ header {
 
 /* === Avatar (profile photo in header) === */
 .avatar {
-    width: 96px;
-    height: 96px;
+    width: 150px;
+    height: 150px;
     border-radius: 12px;
     /* Rounded rectangle */
     object-fit: cover;
@@ -135,6 +135,23 @@ p.lead {
 .chip_red {
     border: 1px solid #D70040;
 }
+
+.chip_al {
+    border: 1px solid #0077BE;
+}
+
+.chip_hp {
+    border: 1px solid #FF3B30;
+}
+
+.chip_cplx {
+    border: 1px solid #5856D6;
+}
+
+.chip_tw {
+    border: 1px solid #8B5E3C;
+}
+
 
 .chip {
     /* Individual certification bubbles */
@@ -252,6 +269,11 @@ p.lead {
     /* background: var(--accent); */
 }
 
+.job-title {
+    font-style: italic;
+    font-size: 13px;
+}
+
 .stats {
     /* Container for flight hour stat boxes in sidebar */
     display: flex;
@@ -270,6 +292,10 @@ p.lead {
     text-align: center;
     cursor: pointer;
     transition: transform .15s
+}
+
+.important-stat {
+    border: 1.5px solid #EFBF04;
 }
 
 .stat:hover {
@@ -358,6 +384,7 @@ p.lead {
     height: 10px;
     border-radius: 50%;
     margin-left: 8px;
+    margin-bottom: 1px;
     vertical-align: middle;
 }
 
